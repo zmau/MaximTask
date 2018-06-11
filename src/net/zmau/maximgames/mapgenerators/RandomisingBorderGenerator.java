@@ -3,6 +3,9 @@ package net.zmau.maximgames.mapgenerators;
 import java.util.Random;
 
 public class RandomisingBorderGenerator implements BordersGenerator{
+	private static int MIN_ARMY_UNITS_COUNT = 18;
+	private static int MAX_ARMY_UNITS_COUNT = 22;
+
 	private Random r;
 	int lowBorder, highBorder; 
 	int lenth;
@@ -21,6 +24,6 @@ public class RandomisingBorderGenerator implements BordersGenerator{
 	
 	@Override
 	public int armySize(){
-		return (int)(4*Math.random() + 18);
+		return (int)((MAX_ARMY_UNITS_COUNT - MIN_ARMY_UNITS_COUNT)*Math.random() + MIN_ARMY_UNITS_COUNT);
 	}
 }

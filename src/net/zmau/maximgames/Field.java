@@ -37,7 +37,7 @@ public class Field extends MapObject{
 
 	@Override 
 	public String toString(){
-		return String.format("%s %d:%d", type, location.x, location.y);
+		return String.format("%s%d:%d", type.name().substring(0, 1), location.x, location.y);
 	}
 	
 	public char asChar(){

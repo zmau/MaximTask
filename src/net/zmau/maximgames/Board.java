@@ -17,18 +17,10 @@ public class Board {
 	public static int HEIGHT = /*16*/60;
 	private static int MIN_TOWNS_COUNT = 1;
 	private static int MAX_TOWNS_COUNT = 4;
-	private static int MIN_ARMY_UNITS_COUNT = 18;
-	private static int MAX_ARMY_UNITS_COUNT = 22;
 	
 	public static void main(String[] args) {
 		BordersGenerator randomBordersGenerator = new RandomisingBorderGenerator(-1, 1, HEIGHT);
 		Board.getInstance(randomBordersGenerator).write();
-		
-		
-		/* test
-		  RandomGenerator r = new RandomGenerator(-1, 1, HEIGHT);
-		for(int i = 0; i < 20; i++)
-			System.out.println(r.next());*/
 	}
 
 	private BordersGenerator bordersGenerator;

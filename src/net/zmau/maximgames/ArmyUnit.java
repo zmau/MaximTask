@@ -54,7 +54,6 @@ public class ArmyUnit extends MapObject {
 					&& f.getType().compatibleTo(this.getGroundType())
 					&& !Board.getInstance().isArmyOn(f)
 				).collect(Collectors.toList());
-		//availableFields = Board.getInstance().withoutArmyFields(availableFields);
 		List<Field> neightboringCoast = getNeightboringCoast();
 		if(neightboringCoast != null && neightboringCoast.size() > 0){
 			Map<Point, Field> otherSide = new HashMap<>(); 
